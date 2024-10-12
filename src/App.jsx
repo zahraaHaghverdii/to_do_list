@@ -41,7 +41,7 @@ function App() {
                 element={<TaskDetails />}
               />
               <Route path="/to_do_list/tasks" element={<TableTasks />} />
-              <Route path="/setting" element={<Settings />} />
+              <Route path="/to_do_list/setting" element={<Settings />} />
             </Route>
 
             <Route path="/to_do_list/login" element={<Login />} />

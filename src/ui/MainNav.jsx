@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import {
   HiOutlineHome,
   HiOutlineCalendar,
-  HiOutlineCog6Tooth,
+  // HiOutlineCog6Tooth,
 } from "react-icons/hi2";
 import styled from "styled-components";
 import { LiaTasksSolid } from "react-icons/lia";
@@ -76,30 +76,30 @@ function MainNav() {
   return (
     <NavList>
       <li>
-        <StyledNavLink to={"/"}>
+        <StyledNavLink to={"/to_do_list/"}>
           <HiOutlineHome />
           <span>Home</span>
         </StyledNavLink>
       </li>
       <li>
-        <StyledNavLink to={"/task-management"}>
+        <StyledNavLink to={"/to_do_list/task-management"}>
           <HiOutlineCalendar />
           <span>Task Management</span>
         </StyledNavLink>
       </li>
 
       <li>
-        <StyledNavLink to={"/tasks"}>
+        <StyledNavLink to={"/to_do_list/tasks"}>
           <LiaTasksSolid />
           <span>All Tasks</span>
         </StyledNavLink>
       </li>
-      <li>
-        <StyledNavLink to={"/setting"}>
+      {/* <li>
+        <StyledNavLink to={"/to_do_list/setting"}>
           <HiOutlineCog6Tooth />
           <span>Settings</span>
         </StyledNavLink>
-      </li>
+      </li> */}
     </NavList>
   );
 }
