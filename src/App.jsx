@@ -30,15 +30,21 @@ function App() {
         <GlobalStyled />
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<AppLayout />}>
-              <Route path="/" element={<Dashboard />} />
-              <Route path="/task-management" element={<TaskManagement />} />
-              <Route path="/task-management/:id" element={<TaskDetails />} />
-              <Route path="/tasks" element={<TableTasks />} />
+            <Route path="/to_do_list/" element={<AppLayout />}>
+              <Route path="/to_do_list/" element={<Dashboard />} />
+              <Route
+                path="/to_do_list/task-management"
+                element={<TaskManagement />}
+              />
+              <Route
+                path="/to_do_list/task-management/:id"
+                element={<TaskDetails />}
+              />
+              <Route path="/to_do_list/tasks" element={<TableTasks />} />
               <Route path="/setting" element={<Settings />} />
             </Route>
 
-            <Route path="/login" element={<Login />} />
+            <Route path="/to_do_list/login" element={<Login />} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>
         </BrowserRouter>

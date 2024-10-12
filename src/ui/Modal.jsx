@@ -42,10 +42,10 @@ const CadrModal = styled.div`
   gap: 1rem;
 `;
 
-const MainModal = styled.div`
-  overflow-y: auto;
-  /* height: 50rem; */
-`;
+// const MainModal = styled.div`
+//   overflow-y: auto;
+//   /* height: 50rem; */
+// `;
 
 const CloseModalButton = styled.span`
   border-radius: var(--border-radius-sm);
@@ -111,10 +111,10 @@ function WindowModal({ children, name }) {
           </CloseModalButton>
 
           {/* main */}
-          <MainModal onClick={() => close()}>
+          {/* <MainModal onClick={() => close()}>
             {children}
-            {/* {cloneElement(children, { onCloseModal: close })} */}
-          </MainModal>
+          </MainModal> */}
+          {cloneElement(children, { onCloseModal: close })}
         </CadrModal>
       </StyledModal>
     </BackModal>,

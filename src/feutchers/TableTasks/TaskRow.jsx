@@ -13,7 +13,7 @@ import { BsCheck2Circle } from "react-icons/bs";
 import { useBackTask } from "../Tasks/useBackTask";
 import { useDoneTask } from "../Tasks/useDoneTask";
 import { useDoingTask } from "../Tasks/useDoingTask";
-// import { useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 
 // const NumberTask = styled.div`
 //   font-size: 14px;
@@ -46,7 +46,7 @@ function TaskRow({ task }) {
   const { doingTask, isLoadingDoingTask } = useDoingTask();
   const { doneTask, isLoadingDoneTask } = useDoneTask();
   const { backTask, isLoadingBackTask } = useBackTask();
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const { id } = task;
 
   const all = task.status === "all";
@@ -56,10 +56,10 @@ function TaskRow({ task }) {
   function handelBackStatus() {
     if (doing) {
       backTask({ id, status: "all" });
-      // navigate("/tasks");
+      navigate("/");
     } else if (done) {
       backTask({ id, status: "doing" });
-      // navigate("/tasks");
+      navigate("/");
     }
   }
 
@@ -143,7 +143,7 @@ function TaskRow({ task }) {
                 resourceName={task.title}
                 status={task.status}
                 disabled={isLoadingDoingTask || isLoadingBackTask}
-                onConfirm={() => doingTask(task.id)}
+                onConfirm={() => (doingTask(id), navigate("/"))}
               >
                 Do you want the task ({task.title}) to be placed in the doing
                 list?
@@ -157,7 +157,7 @@ function TaskRow({ task }) {
                 resourceName={task.title}
                 status={task.status}
                 disabled={isLoadingDoneTask || isLoadingBackTask}
-                onConfirm={() => doneTask(task.id)}
+                onConfirm={() => (doneTask(id), navigate("/"))}
                 onBack={handelBackStatus}
               >
                 Do you want the task ({task.title}) to be placed in the done
@@ -172,7 +172,7 @@ function TaskRow({ task }) {
                 resourceName={task.title}
                 status={task.status}
                 disabled={isLoadingDoingTask || isLoadingBackTask}
-                onConfirm={() => doingTask(task.id)}
+                onConfirm={() => (doingTask(id), navigate("/"))}
                 onBack={handelBackStatus}
               >
                 Do you want the task of completing your intensity ({task.title})
