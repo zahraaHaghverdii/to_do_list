@@ -18,6 +18,7 @@ const StyledMode = styled.div`
     color: var(--color-darkLight-color-50);
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    color: var(--color-darkLight-color-50);
     background: none;
   }
 `;

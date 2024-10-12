@@ -29,7 +29,7 @@ const P = styled.p`
 function Logo() {
   return (
     <StyledLogo>
-      <Img src="/logo.png" alt="logo" />
+      <Img src="logo.png" alt="logo" />
       <P>To Do List</P>
     </StyledLogo>
   );

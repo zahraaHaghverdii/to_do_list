@@ -15,7 +15,7 @@ const Img = styled.img`
 function UserAvator() {
   return (
     <StyledAvator>
-      <Img src="/user-avator.webp" alt="user" />
+      <Img src="user-avator.webp" alt="user" />
     </StyledAvator>
   );
 }
