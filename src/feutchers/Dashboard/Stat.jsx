@@ -12,6 +12,10 @@ const StyledStat = styled.div`
   grid-template-rows: auto auto;
   column-gap: 1.6rem;
   row-gap: 0.4rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    padding: 1rem;
+  }
 `;
 
 const Icon = styled.div`
@@ -54,6 +58,9 @@ const Discription = styled.p`
   line-height: 0.5;
   font-weight: 500;
   color: var(--color-grey-400);
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    line-height: 1.3;
+  }
 `;
 
 function Stat({ lengthTask, status, icon, color, backgroundColor }) {

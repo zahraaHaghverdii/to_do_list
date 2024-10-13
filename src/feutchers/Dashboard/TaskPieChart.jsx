@@ -41,8 +41,6 @@ function TaskPieChart() {
     },
   ];
 
-  console.log(data);
-
   console.log(
     data[0]?.value !== 0 || data[1]?.value !== 0 || data[3]?.value !== 0
   );

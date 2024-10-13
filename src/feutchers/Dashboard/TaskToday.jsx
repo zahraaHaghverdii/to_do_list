@@ -22,6 +22,11 @@ const TodayList = styled.ul`
   overflow: auto;
   overflow-x: hidden;
 
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    height: 185px;
+    overflow-x: auto;
+  }
+
   /* Removing scrollbars for webkit, firefox, and ms, respectively */
   &::-webkit-scrollbar {
     width: 0 !important;

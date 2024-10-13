@@ -28,6 +28,7 @@ const Main = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     padding: 1rem 0;
     height: 82vh;
+    overflow-x: hidden;
   }
 `;
 
