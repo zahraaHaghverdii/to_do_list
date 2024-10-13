@@ -58,10 +58,10 @@ function TaskDetails() {
   function handelBackStatus() {
     if (status === "doing") {
       backTask({ id, status: "all" });
-      navigate("/to_do_list/task-management");
+      navigate("/task-management");
     } else if (status === "done") {
       backTask({ id, status: "doing" });
-      navigate("/to_do_list/task-management");
+      navigate("/task-management");
     }
   }
 
@@ -109,7 +109,7 @@ function TaskDetails() {
                   status={status}
                   disabled={isLoadingDoingTask || isLoadingBackTask}
                   onConfirm={() => (
-                    doingTask(id), navigate("/to_do_list/task-management")
+                    doingTask(id), navigate("/task-management")
                   )}
                 >
                   Do you want the task ({title}) to be placed in the doing list?
@@ -123,9 +123,7 @@ function TaskDetails() {
                   resourceName={title}
                   status={status}
                   disabled={isLoadingDoneTask || isLoadingBackTask}
-                  onConfirm={() => (
-                    doneTask(id), navigate("/to_do_list/task-management")
-                  )}
+                  onConfirm={() => (doneTask(id), navigate("/task-management"))}
                   onBack={handelBackStatus}
                 >
                   Do you want the task ({title}) to be placed in the done list?
@@ -140,7 +138,7 @@ function TaskDetails() {
                   status={status}
                   disabled={isLoadingDoingTask || isLoadingBackTask}
                   onConfirm={() => (
-                    doingTask(id), navigate("/to_do_list/task-management")
+                    doingTask(id), navigate("/task-management")
                   )}
                   onBack={handelBackStatus}
                 >

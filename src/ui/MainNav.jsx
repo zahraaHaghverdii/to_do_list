@@ -76,26 +76,26 @@ function MainNav() {
   return (
     <NavList>
       <li>
-        <StyledNavLink to={"/to_do_list/"}>
+        <StyledNavLink to={"/"}>
           <HiOutlineHome />
           <span>Home</span>
         </StyledNavLink>
       </li>
       <li>
-        <StyledNavLink to={"/to_do_list/task-management"}>
+        <StyledNavLink to={"/task-management"}>
           <HiOutlineCalendar />
           <span>Task Management</span>
         </StyledNavLink>
       </li>
 
       <li>
-        <StyledNavLink to={"/to_do_list/tasks"}>
+        <StyledNavLink to={"/tasks"}>
           <LiaTasksSolid />
           <span>All Tasks</span>
         </StyledNavLink>
       </li>
       {/* <li>
-        <StyledNavLink to={"/to_do_list/setting"}>
+        <StyledNavLink to={"/setting"}>
           <HiOutlineCog6Tooth />
           <span>Settings</span>
         </StyledNavLink>

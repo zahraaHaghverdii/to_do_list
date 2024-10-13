@@ -28,23 +28,17 @@ function App() {
       <QueryClientProvider client={queryclient}>
         <ReactQueryDevtools initialIsOpen={false} />
         <GlobalStyled />
-        <BrowserRouter>
+        <BrowserRouter basename="/to_do_list">
           <Routes>
-            <Route path="/to_do_list/" element={<AppLayout />}>
-              <Route path="/to_do_list/" element={<Dashboard />} />
-              <Route
-                path="/to_do_list/task-management"
-                element={<TaskManagement />}
-              />
-              <Route
-                path="/to_do_list/task-management/:id"
-                element={<TaskDetails />}
-              />
-              <Route path="/to_do_list/tasks" element={<TableTasks />} />
-              <Route path="/to_do_list/setting" element={<Settings />} />
+            <Route path="/dashboard" element={<AppLayout />}>
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/task-management" element={<TaskManagement />} />
+              <Route path="/task-management/:id" element={<TaskDetails />} />
+              <Route path="/tasks" element={<TableTasks />} />
+              <Route path="/setting" element={<Settings />} />
             </Route>
 
-            <Route path="/to_do_list/login" element={<Login />} />
+            <Route path="/login" element={<Login />} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>
         </BrowserRouter>

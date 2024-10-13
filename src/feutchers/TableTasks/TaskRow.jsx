@@ -56,10 +56,10 @@ function TaskRow({ task }) {
   function handelBackStatus() {
     if (doing) {
       backTask({ id, status: "all" });
-      navigate("/to_do_list/");
+      navigate("/");
     } else if (done) {
       backTask({ id, status: "doing" });
-      navigate("/to_do_list/");
+      navigate("/");
     }
   }
 
@@ -143,7 +143,7 @@ function TaskRow({ task }) {
                 resourceName={task.title}
                 status={task.status}
                 disabled={isLoadingDoingTask || isLoadingBackTask}
-                onConfirm={() => (doingTask(id), navigate("/to_do_list/"))}
+                onConfirm={() => (doingTask(id), navigate("/"))}
               >
                 Do you want the task ({task.title}) to be placed in the doing
                 list?
@@ -157,7 +157,7 @@ function TaskRow({ task }) {
                 resourceName={task.title}
                 status={task.status}
                 disabled={isLoadingDoneTask || isLoadingBackTask}
-                onConfirm={() => (doneTask(id), navigate("/to_do_list/"))}
+                onConfirm={() => (doneTask(id), navigate("/"))}
                 onBack={handelBackStatus}
               >
                 Do you want the task ({task.title}) to be placed in the done
@@ -172,7 +172,7 @@ function TaskRow({ task }) {
                 resourceName={task.title}
                 status={task.status}
                 disabled={isLoadingDoingTask || isLoadingBackTask}
-                onConfirm={() => (doingTask(id), navigate("/to_do_list/"))}
+                onConfirm={() => (doingTask(id), navigate("/"))}
                 onBack={handelBackStatus}
               >
                 Do you want the task of completing your intensity ({task.title})
